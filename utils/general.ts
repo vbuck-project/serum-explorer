@@ -6,7 +6,7 @@ export function classNames(...classes: string[]): string {
 }
 
 export function getExplorerLink(txSig: string, cluster: ClusterType): string {
-  return `https://explorer.solana.com/tx/${txSig}?cluster=${
+  return `https://solscan.io/tx/${txSig}?cluster=${
     cluster === "mainnet-beta" ? null : cluster
   }`;
 }
@@ -15,7 +15,7 @@ export function getExplorerAccountLink(
   account: PublicKey,
   cluster: ClusterType
 ): string {
-  return `https://explorer.solana.com/address/${account.toString()}?cluster=${
+  return `https://solscan.io/address/${account.toString()}?cluster=${
     cluster === "mainnet-beta" ? null : cluster
   }`;
 }
